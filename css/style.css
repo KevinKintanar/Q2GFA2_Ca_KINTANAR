@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Montserrat&family=Space+Grotesk:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    overflow: hidden;
+}
+
+.banner
+{
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 3;
+    margin-top: 1vh;
+
+    border: 0px;
+    border-radius: 16%;
+
+    width: 50vw;
+    height: 6vh;
+    background-color: rgba(255, 255, 255, 25%)
+    
+}
+
+.spacer
+{
+    border: 0px;
+
+    width: 100vw;
+    height: 1vh;
+}
+
+.text
+{
+    opacity: 100%;
+
+    color: white;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: xx-large;
+
+    text-align: center;
+}
+
+.E_Ice{
+    background-image: url(../images/ice_earth.gif);
+    width: 200px;
+    height: 200px;
+
+    position: absolute;
+    Z-index: 2; 
+
+    animation: IceMotion 20s linear infinite;
+}
+
+.E_Lava{
+    background-image: url(../images/lava_earth.gif);
+    width: 200px;
+    height: 200px;
+
+    position: absolute;
+    Z-index: 2; 
+
+    animation: LavaMotion 20s linear infinite;
+}
+
+.E_Island{
+    background-image: url(../images/island_earth.gif);
+    width: 200px;
+    height: 200px;
+
+    position: absolute;
+    Z-index: 2; 
+
+    animation: IslandMotion 20s linear infinite;
+}
+
+.E_NoAtmosphere{
+    background-image: url(../images/no_atmosphere_earth.gif);
+    width: 200px;
+    height: 200px;
+
+    position: absolute;
+    Z-index: 2; 
+
+    animation: NoAtmosphereMotion 20s linear infinite;
+}
+
+.Galaxy
+{
+    background-image: url(../images/galaxy.gif);
+    width: 250px;
+    height: 250px;
+    Z-index: 1; 
+
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-left: 22.25vw;
+    margin-right: 0vh;
+    margin-top: 25vh;
+
+    animation: GalaxyScale 20s linear infinite; 
+
+}
+
+.Blackhole
+{
+    background-image: url(../images/black_hole.gif);
+    width: 250px;
+    height: 250px;
+    Z-index: 1; 
+
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-left: 42.5vw;
+    margin-right: 0vh;
+    margin-top: 25vh;
+
+    animation: BlackholeRotate 20s linear infinite; 
+}
+
+.Star
+{
+    background-image: url(../images/star.gif);
+    width: 250px;
+    height: 250px;
+    Z-index: 1; 
+
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-left: 64.75vw;
+    margin-right: 0vh;
+    margin-top: 25vh;
+
+    animation: StarSkew 20s linear infinite; 
+
+}
+
+.Background{
+    background-image: url(../images/starry_background.jpg);
+    width: 100vw;
+    height: 100vh;
+
+    display: inline-block;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+/** ANIMATION CODE **/
+
+@keyframes IceMotion{
+    0%  {transform:translate(-20vw, 0vw);}
+    100% {transform:translate(100vw, 0vw);}
+}
+
+@keyframes LavaMotion{
+    100%  {transform:translate(-20vw, 0vw);}
+    0% {transform:translate(100vw, 0vw);}
+}
+
+@keyframes IslandMotion{
+    0%  {transform:translate(-20vw, 30vw);}
+    100% {transform:translate(100vw, 30vw);}
+}
+
+@keyframes NoAtmosphereMotion{
+    100%  {transform:translate(-20vw, 30vw);}
+    0% {transform:translate(100vw, 30vw);}
+}
+
+@keyframes GalaxyScale{
+    0% {transform: scale(3, 3);}
+    100% {transform: scale(1, 1);}
+}
+
+@keyframes BlackholeRotate{
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
+}
+
+@keyframes StarSkew{
+    0% {transform: skew(0deg, 0deg)}
+    100%{transform: skew(30deg, 60deg)}
+}
